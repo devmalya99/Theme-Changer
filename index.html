@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Changer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+
+
+<div class="container">
+    <div class="center">
+      <button id="btn">Change Theme</button>
+    </div>
+  </div>
+
+</body>
+
+    
+<script>
+
+
+const modeBtn=document.querySelector('#btn')
+
+const body=document.querySelector('body')
+
+let currMode='Light';
+
+modeBtn.addEventListener('click',()=>
+{
+    if(currMode=='Light')
+    {
+        body.style.backgroundColor='Black';
+        modeBtn.style.backgroundColor='red';
+        modeBtn.style.color='White';
+        currMode='Dark';
+        console.log('You Have Successfully Changed the Theme to Dark')
+
+    }
+    else{
+        body.style.backgroundColor='white';
+        modeBtn.style.backgroundColor='lawngreen';
+        modeBtn.style.color='black';
+
+        currMode='Light';
+        console.log('You Have Successfully Changed the Theme to Light')
+
+    }
+
+    })
+
+</script>
+</html>
